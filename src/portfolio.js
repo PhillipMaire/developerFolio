@@ -1,9 +1,18 @@
 /* Change this file to get your personal Portfolio */
 
+
+// cd /Users/phil/Dropbox/HIRES_LAB/GitHub/developerFolio/ ; npm start
+
+
+
 // To change portfolio colors globally go to the  _globalColor.scss file
 
 import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
+// import splashAnimation from "./assets/custom_images/profile_image.png"; // Rename to your file name for custom animation
+// import customImage from "./assets/custom_images/profile_image.png"; // Replace with your custom image file path
+
+
 
 // Splash Screen
 
@@ -16,30 +25,31 @@ const splashScreen = {
 // Summary And Greeting Section
 
 const illustration = {
-  animated: true // Set to false to use static SVG
+  animated: false // Set to false to use static SVG
 };
 
 const greeting = {
-  username: "Saad Pasta",
-  title: "Hi all, I'm Saad",
+  username: "Phillip Maire",
+  title: "Hi everyone, I'm Phil",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks."
+    ["Your go-to data expert for transforming complex data into simple solutions: Data Science / MLOps / Data Engineering"]
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
+    "https://www.dropbox.com/s/ltbbxpg8eby4ppl/Phillip_Maire_resume.pdf?dl=0", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
+
 
 // Social Media Links
 
 const socialMediaLinks = {
-  github: "https://github.com/saadpasta",
-  linkedin: "https://www.linkedin.com/in/saadpasta/",
-  gmail: "saadpasta70@gmail.com",
-  gitlab: "https://gitlab.com/saadpasta",
-  facebook: "https://www.facebook.com/saad.pasta7",
-  medium: "https://medium.com/@saadpasta",
-  stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta",
+  github: "https://github.com/phillipmaire",
+  linkedin: "https://www.linkedin.com/in/phillip-maire-ba17a4b6/",
+  gmail: "deep.data.phil@gmail.com",
+  // gitlab: "____________",
+  // facebook: "____________",
+  // medium: "____________",
+  stackoverflow: "https://stackoverflow.com/users/13944456/phillip-maire",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
   display: true // Set true to display this section, defaults to false
@@ -49,14 +59,19 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle: "Everything data! Modeling, MLOps, smart model selection, data engineering, visualization and more",
   skills: [
     emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
+      "⚡ Project Scoping, pipeline design"
     ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
     emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
+      "⚡ Clean and optimize data for model based solutions"
+    ),
+    emoji(
+      "⚡ Train and deploy models for production"
+      ),
+    emoji(
+      "⚡ Maintain models through data/concept drift to ensure their long term utility"
     )
   ],
 
@@ -65,57 +80,30 @@ https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
     {
-      skillName: "html-5",
-      fontAwesomeClassname: "fab fa-html5"
-    },
-    {
-      skillName: "css3",
-      fontAwesomeClassname: "fab fa-css3-alt"
-    },
-    {
-      skillName: "sass",
-      fontAwesomeClassname: "fab fa-sass"
-    },
-    {
-      skillName: "JavaScript",
-      fontAwesomeClassname: "fab fa-js"
-    },
-    {
-      skillName: "reactjs",
-      fontAwesomeClassname: "fab fa-react"
-    },
-    {
-      skillName: "nodejs",
-      fontAwesomeClassname: "fab fa-node"
-    },
-    {
-      skillName: "swift",
-      fontAwesomeClassname: "fab fa-swift"
-    },
-    {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
-    },
-    {
-      skillName: "sql-database",
-      fontAwesomeClassname: "fas fa-database"
-    },
-    {
-      skillName: "aws",
-      fontAwesomeClassname: "fab fa-aws"
-    },
-    {
-      skillName: "firebase",
-      fontAwesomeClassname: "fas fa-fire"
-    },
-    {
       skillName: "python",
       fontAwesomeClassname: "fab fa-python"
     },
     {
+      skillName: "MLOps",
+      fontAwesomeClassname: "fas fa-cogs"
+    },
+    {
+      skillName: "Deep learning",
+      fontAwesomeClassname: "fas fa-robot"
+    },
+    { 
+      skillName: "Data visualization",
+      fontAwesomeClassname: "fas fa-chart-line"
+    },
+    {
+      skillName: "sql",
+      fontAwesomeClassname: "fas fa-database"
+    },
+    {
       skillName: "docker",
       fontAwesomeClassname: "fab fa-docker"
-    }
+    },
+
   ],
   display: true // Set false to hide this section, defaults to true
 };
@@ -126,23 +114,25 @@ const educationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
-      schoolName: "Harvard University",
-      logo: require("./assets/images/harvardLogo.png"),
-      subHeader: "Master of Science in Computer Science",
-      duration: "September 2017 - April 2019",
-      desc: "Participated in the research of XXX and published 3 papers.",
+      schoolName: "University of Southern California",
+      logo: require("./assets/job_images/uscLogoWhiteBackground.png"),
+      subHeader: "Doctor of Philosophy, Neuroscience",
+      duration: "July 2015 - June 2023",
+      desc: "Developed a python package to save thousands of hours using a 2-stage deep learning model. Modeled neural time-series and animal behavior ",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "WhACC: Whisker Automatic Contact Classifier with Expert Human-Level Performance. (in review, 2023) https://github.com/hireslab/whacc",
+        "Active touch remaps barrel cortex output from a representation of self-motion to object location. (PLoS Biology 2020)",
+        "The behavioral basis of whisker-guided anteroposterior object localization in head-fixed mice. (Current Biology 2019)",
+        "NIH T32 grant recipient, Institutional National Research Service Award"
       ]
     },
     {
-      schoolName: "Stanford University",
-      logo: require("./assets/images/stanfordLogo.png"),
-      subHeader: "Bachelor of Science in Computer Science",
-      duration: "September 2013 - April 2017",
-      desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
-      descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
+      schoolName: "University of Louisville",
+      logo: require("./assets/job_images/University_of_Louisville_seal_white_backbround.png"),
+      subHeader: "Bachelor of Science, Psychology",
+      duration: "July 2009 - December 2013",
+      desc: "Graduated with honors and completed a thesis on animal vision and neural response properties in the primary visual cortex",
+      descBullets: ["Awarded a position in the Kentucky Biomedical Research Infrastructure Network (KBRIN) summer research program"]
     }
   ]
 };
@@ -150,7 +140,7 @@ const educationInfo = {
 // Your top 3 proficient stacks/tech experience
 
 const techStack = {
-  viewSkillBars: true, //Set it to true to show Proficiency Section
+  viewSkillBars: false, //Set it to true to show Proficiency Section
   experience: [
     {
       Stack: "Frontend/Design", //Insert stack or technology you have experience in
@@ -174,29 +164,41 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Software Engineer",
-      company: "Facebook",
-      companylogo: require("./assets/images/facebookLogo.png"),
-      date: "June 2018 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      role: "Doctoral Researcher",
+      company: "University of Southern California, Dr. Andrew Hires Laboratory",
+      companylogo: require("./assets/job_images/uscLogoBackground.png"),
+      date: "July 2015 - June 2023",
+      desc: "completed my dissertation \"Tactile Object Localization: Behavioral Correlates, Neural Representations, and a Deep Learning Hybrid Model to Classify Touch\". Published 3 Journal articles.",
+     descBullets: [
+      "Developed an open-source Python package to classify video frames (WhACC)",
+      "Developed data pipelines to massively improve data processing efficiency",
+      "Modeled behavioral and neural time-series data"
+
       ]
     },
     {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: require("./assets/images/quoraLogo.png"),
-      date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "Assistant Research Scientist",
+      company: "University of Louisville, Dr. Marth Bickford's Laboratory",
+      companylogo: require("./assets/job_images/University_of_Louisville_seal_white_backbround.png"),
+      date: "May 2014 – June 2015",
+      desc: "Gathered and analyzed data | crafted visual representations",
+      descBullets: [
+      "Analyze and visualize neurophysiology data from whole cell recordings",
+      "Communicate scientific findings and contribute valuable data to publish a paper (Zhou, Maire et al. 2017)",
+      "Contributed to help secure a grant worth nearly $2 million"
+      ]
     },
     {
-      role: "Software Engineer Intern",
-      company: "Airbnb",
-      companylogo: require("./assets/images/airbnbLogo.png"),
-      date: "Jan 2015 – Sep 2015",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "Research Assistant",
+      company: "University of Louisville, Dr. Heywood Petry's Laboratory",
+      companylogo: require("./assets/job_images/University_of_Louisville_seal_white_backbround.png"),
+      date: "Febuary 2010 – December 2015",
+      desc: "Gathered and analyzed data | developed tools",
+      descBullets: [
+      "Developed tools and performed statistical analysis to answer questions about vision and the brain",
+      "Collected and analyzed single unit electrophysiology and behavioral data",
+      "Programmed a reverse correlation stimulus program to map spatiotemporal visual receptive fields in the visual cortex",
+      ]
     }
   ]
 };
@@ -239,7 +241,7 @@ const bigProjects = {
       ]
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Achievement Section
@@ -300,7 +302,7 @@ const achievementSection = {
       ]
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Blogs Section
@@ -324,7 +326,7 @@ const blogSection = {
         "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Talks Sections
@@ -343,7 +345,7 @@ const talkSection = {
       event_url: "https://www.facebook.com/events/2339906106275053/"
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Podcast Section
@@ -356,25 +358,25 @@ const podcastSection = {
   podcast: [
     "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 const contactInfo = {
-  title: emoji("Contact Me ☎️"),
+  title: emoji("Contact Me"),
   subtitle:
-    "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+92-0000000000",
-  email_address: "saadpasta70@gmail.com"
+    "Discuss a project or just want to say hi? My Inbox is open.",
+  number: "(502) 310-9622",
+  email_address: "deep.data.phil@gmail.com"
 };
 
 // Twitter Section
 
 const twitterDetails = {
   userName: "twitter", //Replace "twitter" with your twitter username without @
-  display: true // Set true to display this section, defaults to false
+  display: false // Set true to display this section, defaults to false
 };
 
-const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
 
 export {
   illustration,
